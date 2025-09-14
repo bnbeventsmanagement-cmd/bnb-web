@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CoffeeIcon, ClipboardListIcon, UsersIcon, PhoneCallIcon, LayoutGridIcon, CalendarIcon, Play } from 'lucide-react';
-import Seo from '../components/Seo';
-import { organization, localBusiness, serviceRSVP, breadcrumbsFor } from '../seo/structuredData';
+// import Seo from '../components/Seo';
+// import { organization, localBusiness, serviceRSVP, breadcrumbsFor } from '../seo/structuredData';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import process data
 import processData from '../cms/data/process.json';
@@ -37,28 +37,7 @@ const Process = () => {
 
   return (
     <>
-      <Seo 
-        title="תהליך העבודה | B&B אישורי הגעה"
-        description="גלו איך אנחנו עובדים: משלב הייעוץ הראשוני ועד ליום האירוע - תהליך מקצועי ומסודר לשירותי אישורי הגעה וניהול אירועים."
-        keywords={[
-          "תהליך עבודה",
-          "שירותי אישורי הגעה",
-          "ניהול אירועים",
-          "תהליך מקצועי",
-          "ייעוץ אירועים"
-        ]}
-        canonical="/process"
-        image="/og-default.jpg"
-        structuredData={[
-          organization,
-          localBusiness,
-          serviceRSVP,
-          breadcrumbsFor([
-            { name: "בית", url: "/" },
-            { name: "תהליך העבודה", url: "/process" }
-          ])
-        ]}
-      />
+      {/* SEO temporarily disabled for build */}
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-20 md:py-32 relative overflow-hidden border-b border-slate-100">

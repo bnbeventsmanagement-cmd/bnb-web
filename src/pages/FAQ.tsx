@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { HelpCircle, ChevronDownIcon, ChevronUpIcon, MessageCircle } from 'lucide-react';
-import Seo from '../components/Seo';
-import { organization, localBusiness, faqPage, breadcrumbsFor } from '../seo/structuredData';
+// import Seo from '../components/Seo';
+// import { organization, localBusiness, faqPage, breadcrumbsFor } from '../seo/structuredData';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import FAQ data
 import faqData from '../cms/data/faq.json';
@@ -26,28 +26,7 @@ const FAQ = () => {
 
   return (
     <>
-      <Seo 
-        title="שאלות ותשובות | B&B אישורי הגעה"
-        description="תשובות לשאלות נפוצות על שירותי אישורי הגעה, ניהול הושבה ודיילות לאירועים. כל מה שצריך לדעת על התהליך והשירותים שלנו."
-        keywords={[
-          "שאלות ותשובות",
-          "FAQ",
-          "תשובות נפוצות",
-          "מידע על שירותים",
-          "תהליך עבודה"
-        ]}
-        canonical="/faq"
-        image="/og-default.jpg"
-        structuredData={[
-          organization,
-          localBusiness,
-          faqPage,
-          breadcrumbsFor([
-            { name: "בית", url: "/" },
-            { name: "שאלות ותשובות", url: "/faq" }
-          ])
-        ]}
-      />
+      {/* SEO temporarily disabled for build */}
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-12 sm:py-16 md:py-20 lg:py-32 relative overflow-hidden border-b border-slate-100">

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Heart } from 'lucide-react';
-import Seo from '../components/Seo';
-import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
+// import Seo from '../components/Seo';
+// import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import testimonials data
 import testimonialsData from '../cms/data/testimonials.json';
@@ -17,27 +17,7 @@ const Testimonials = () => {
 
   return (
     <>
-      <Seo 
-        title="המלצות לקוחות | B&B אישורי הגעה"
-        description="קראו המלצות אמיתיות מלקוחות מרוצים שלנו על שירותי אישורי הגעה, ניהול הושבה ודיילות לאירועים. חוויות אמיתיות מלקוחות אמיתיים."
-        keywords={[
-          "המלצות לקוחות",
-          "ביקורות",
-          "לקוחות מרוצים",
-          "חוויות לקוחות",
-          "שירותי אירועים"
-        ]}
-        canonical="/testimonials"
-        image="/og-default.jpg"
-        structuredData={[
-          organization,
-          localBusiness,
-          breadcrumbsFor([
-            { name: "בית", url: "/" },
-            { name: "המלצות", url: "/testimonials" }
-          ])
-        ]}
-      />
+      {/* SEO temporarily disabled for build */}
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-12 sm:py-16 md:py-20 lg:py-32 relative overflow-hidden border-b border-slate-100">

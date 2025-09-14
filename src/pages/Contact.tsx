@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { PhoneIcon, MailIcon, MessageCircle, Send } from 'lucide-react';
-import Seo from '../components/Seo';
-import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
+// import Seo from '../components/Seo';
+// import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
 import ContactForm from '../components/ContactForm';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import contact data
@@ -18,27 +18,7 @@ const Contact = () => {
 
   return (
     <>
-      <Seo 
-        title="צור קשר | B&B אישורי הגעה"
-        description="דברו איתנו לכל שאלה: ייעוץ, הצעת מחיר והתאמה אישית לשירותי אישורי הגעה, הושבה ודיילות."
-        keywords={[
-          "צור קשר",
-          "ייעוץ אירועים",
-          "הצעת מחיר",
-          "שירותי אישורי הגעה",
-          "ניהול אירועים"
-        ]}
-        canonical="/contact"
-        image="/og-default.jpg"
-        structuredData={[
-          organization,
-          localBusiness,
-          breadcrumbsFor([
-            { name: "בית", url: "/" },
-            { name: "צור קשר", url: "/contact" }
-          ])
-        ]}
-      />
+      {/* SEO temporarily disabled for build */}
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-20 md:py-32 relative overflow-hidden border-b border-slate-100">

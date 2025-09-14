@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Building2, Handshake, ChevronDownIcon, ChevronUpIcon } from 'lucide-react';
-import Seo from '../components/Seo';
-import { organization, localBusiness, serviceSuppliers, breadcrumbsFor } from '../seo/structuredData';
+// import Seo from '../components/Seo';
+// import { organization, localBusiness, serviceSuppliers, breadcrumbsFor } from '../seo/structuredData';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import vendors data
 import vendorsData from '../cms/data/vendors.json';
@@ -26,28 +26,7 @@ const Vendors = () => {
 
   return (
     <>
-      <Seo 
-        title="הספקים שלנו | B&B אישורי הגעה"
-        description="חיבור לספקים מובילים ואמינים לאירועים: צילום, מוזיקה, עמדות מיוחדות, קייטרינג ועוד. רשת ספקים מקצועית לשירותי אירועים מושלמים."
-        keywords={[
-          "ספקים לאירועים",
-          "ספקי חתונות",
-          "צילום אירועים",
-          "מוזיקה לאירועים",
-          "קייטרינג לאירועים"
-        ]}
-        canonical="/vendors"
-        image="/og-default.jpg"
-        structuredData={[
-          organization,
-          localBusiness,
-          serviceSuppliers,
-          breadcrumbsFor([
-            { name: "בית", url: "/" },
-            { name: "הספקים שלנו", url: "/vendors" }
-          ])
-        ]}
-      />
+      {/* SEO temporarily disabled for build */}
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-20 md:py-32 relative overflow-hidden border-b border-slate-100">

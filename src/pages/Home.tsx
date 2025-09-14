@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UsersIcon, LayoutGridIcon, ArrowLeft, Sparkles, CheckCircle, Mail, Gift, MapPin, MessageSquare, Bell, Users, Star as StarIcon, CreditCard, FileText, Download, Smartphone, DollarSign, Briefcase, Baby, Star as StarIcon2, Heart, ArrowRight } from 'lucide-react';
-import Seo from '../components/Seo';
-import { organization, localBusiness, webSite, breadcrumbsFor } from '../seo/structuredData';
+// import Seo from '../components/Seo';
+// import { organization, localBusiness, webSite, breadcrumbsFor } from '../seo/structuredData';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import { scrollToTop } from '../utils/scrollToTop';
 // Import home data
@@ -70,29 +70,7 @@ const Home = () => {
 
   return (
     <>
-      <Seo 
-        title="B&B אישורי הגעה לאירועים | ניהול הושבה, דיילות ומנהלי אירוע"
-        description="שירותי אישורי הגעה לאירועים וחתונות, ניהול הושבה חכם, דיילות ומנהלי אירוע, ספקים ואטרקציות, ועיצוב הזמנות דיגיטליות – הכל במקום אחד."
-        keywords={[
-          "אישורי הגעה לאירועים",
-          "אישורי הגעה לחתונה", 
-          "ניהול הושבה",
-          "דיילות לאירועים",
-          "מנהלי אירוע",
-          "אטרקציות לאירועים",
-          "הזמנות דיגיטליות"
-        ]}
-        canonical="/"
-        image="/og-default.jpg"
-        structuredData={[
-          organization,
-          localBusiness,
-          webSite,
-          breadcrumbsFor([
-            { name: "בית", url: "/" }
-          ])
-        ]}
-      />
+      {/* SEO temporarily disabled for build */}
       
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden bg-white">

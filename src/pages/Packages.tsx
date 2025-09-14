@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckIcon, Package, Star, Crown, Shield, Zap } from 'lucide-react';
-import Seo from '../components/Seo';
-import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
+// import Seo from '../components/Seo';
+// import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import { scrollToTop } from '../utils/scrollToTop';
 // Import packages data
@@ -19,27 +19,7 @@ const Packages = () => {
 
   return (
     <>
-      <Seo 
-        title="החבילות שלנו | B&B אישורי הגעה"
-        description="חבילות שירות מותאמות אישית לאירועים: מחבילת בסיס ועד חבילה מלאה הכוללת אישורי הגעה, ניהול הושבה, דיילות ומנהל אירוע."
-        keywords={[
-          "חבילות שירות",
-          "מחירי אישורי הגעה",
-          "חבילת בסיס",
-          "חבילה מלאה",
-          "שירותי אירועים"
-        ]}
-        canonical="/packages"
-        image="/og-default.jpg"
-        structuredData={[
-          organization,
-          localBusiness,
-          breadcrumbsFor([
-            { name: "בית", url: "/" },
-            { name: "החבילות שלנו", url: "/packages" }
-          ])
-        ]}
-      />
+      {/* SEO temporarily disabled for build */}
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-20 md:py-32 relative overflow-hidden border-b border-slate-100">

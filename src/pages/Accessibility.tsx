@@ -1,32 +1,12 @@
 import { Shield, CheckCircle, ExternalLink } from 'lucide-react';
-import Seo from '../components/Seo';
-import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
+// import Seo from '../components/Seo';
+// import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 
 const Accessibility = () => {
   return (
     <>
-      <Seo 
-        title="הצהרת נגישות - B&B אישורי הגעה"
-        description="הצהרת נגישות של B&B אישורי הגעה - מחויבותנו לנגישות דיגיטלית לפי תקן ת״י 5568"
-        keywords={[
-          "נגישות",
-          "הצהרת נגישות",
-          "תקן ת״י 5568",
-          "WCAG",
-          "נגישות דיגיטלית"
-        ]}
-        canonical="/accessibility"
-        image="/og-default.jpg"
-        structuredData={[
-          organization,
-          localBusiness,
-          breadcrumbsFor([
-            { name: "בית", url: "/" },
-            { name: "הצהרת נגישות", url: "/accessibility" }
-          ])
-        ]}
-      />
+      {/* SEO temporarily disabled for build */}
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-12 sm:py-16 md:py-20 lg:py-32 relative overflow-hidden border-b border-slate-100">
