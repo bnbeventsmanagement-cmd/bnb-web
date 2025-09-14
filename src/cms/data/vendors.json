@@ -1,0 +1,154 @@
+{
+  "title": "הספקים שלנו",
+  "subtitle": "אנו עובדים עם מיטב הספקים בתחום האירועים",
+  "vendors": [
+    {
+      "name": "אטרקציות",
+      "items": [
+        {
+          "name": "פארק המים",
+          "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "אטרקציות מים ופעילויות מהנות",
+          "website": "https://example.com"
+        },
+        {
+          "name": "מתחם הרפתקאות",
+          "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "פעילויות אתגריות ומשחקים",
+          "website": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "מפיקים ומנהלי אירוע",
+      "items": [
+        {
+          "name": "אירועים מושלמים",
+          "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "הפקת אירועים מקצועית ומקיפה",
+          "website": "https://example.com"
+        },
+        {
+          "name": "מנהלי אירועים פלוס",
+          "image": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "ניהול אירועים מקצועי ואישי",
+          "website": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "דיג'יים",
+      "items": [
+        {
+          "name": "DJ מוזיקה",
+          "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "דיג'יי מקצועי עם ציוד מתקדם",
+          "website": "https://example.com"
+        },
+        {
+          "name": "סאונד ומוזיקה",
+          "image": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "שירותי סאונד ומוזיקה לאירועים",
+          "website": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "אומנים",
+      "items": [
+        {
+          "name": "אומני במה",
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "הופעות חיות ואומנות במה",
+          "website": "https://example.com"
+        },
+        {
+          "name": "מוזיקאים",
+          "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "מוזיקאים מקצועיים להופעות",
+          "website": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "צלמים",
+      "items": [
+        {
+          "name": "סטודיו אור",
+          "image": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "צילום אירועים מקצועי ואיכותי",
+          "website": "https://example.com"
+        },
+        {
+          "name": "רגעים בתמונה",
+          "image": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "צילום וידאו ותמונות לאירועים",
+          "website": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "גני אירועים ואולמות",
+      "items": [
+        {
+          "name": "אחוזת מרגו",
+          "image": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "גן אירועים יוקרתי במרכז הארץ",
+          "website": "https://example.com"
+        },
+        {
+          "name": "חצר המלכה",
+          "image": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "אולם אירועים מפואר עם גן מרהיב",
+          "website": "https://example.com"
+        },
+        {
+          "name": "וילה ורדים",
+          "image": "https://images.unsplash.com/photo-1507504031003-b417219a0fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "וילה פרטית לאירועים קטנים ואינטימיים",
+          "website": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "מאפרות",
+      "items": [
+        {
+          "name": "איפור מקצועי",
+          "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "איפור מקצועי לכל סוגי האירועים",
+          "website": "https://example.com"
+        },
+        {
+          "name": "סטודיו יופי",
+          "image": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "שירותי יופי ואיפור מתקדמים",
+          "website": "https://example.com"
+        }
+      ]
+    },
+    {
+      "name": "הזמנות דיגיטליות",
+      "items": [
+        {
+          "name": "הזמנות דיגיטל",
+          "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "עיצוב והפקת הזמנות דיגיטליות",
+          "website": "https://example.com"
+        },
+        {
+          "name": "עיצוב הזמנות",
+          "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+          "description": "עיצוב הזמנות מקצועי וייחודי",
+          "website": "https://example.com"
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "הספקים שלנו | B&B RSVP",
+    "description": "הכירו את מיטב הספקים בתחום האירועים שאנו עובדים איתם - גני אירועים, צלמים, קייטרינג ועוד.",
+    "keywords": ["ספקי אירועים", "גני אירועים", "צלמים", "קייטרינג", "שיתופי פעולה"],
+    "ogImage": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+  }
+}

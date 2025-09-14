@@ -1,0 +1,48 @@
+{
+  "title": "המלצות",
+  "subtitle": "לקוחות מספרים על החוויה שלהם עם B&B RSVP",
+  "quotes": [
+    {
+      "quote": "הצוות של B&B RSVP הפך את האירוע שלנו לחוויה נפלאה. הם דאגו לכל פרט ופרט והיו מקצועיים ואדיבים.",
+      "author": "רוני ודניאל",
+      "event": "חתונה, יוני 2023",
+      "image": "https://images.unsplash.com/photo-1623091411395-09e79fdbfcf3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "quote": "אני לא יודעת מה היינו עושים בלעדיהם. הם לקחו על עצמם את כל הטיפול באישורי ההגעה וסידור השולחנות, וחסכו לנו המון לחץ וזמן.",
+      "author": "מיכל ועידו",
+      "event": "חתונה, אוגוסט 2023",
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "quote": "מקצועיות ברמה הגבוהה ביותר. הצוות היה אדיב, זמין ונתן מענה לכל שאלה ובקשה.",
+      "author": "שרון וגיל",
+      "event": "בר מצווה, מאי 2023",
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "quote": "שירות מעולה, יחס אישי ומקצועי. ממליצים בחום!",
+      "author": "נועה ואלון",
+      "event": "חתונה, ספטמבר 2022",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "quote": "החבילה המלאה שלהם שווה כל שקל. צוות קבלת הפנים היה מקצועי ואדיב, והאורחים שיבחו אותם.",
+      "author": "יעל ואסף",
+      "event": "חתונה, יולי 2023",
+      "image": "https://images.unsplash.com/photo-1557555187-23d685287bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    },
+    {
+      "quote": "הם הצילו לנו את האירוע! שבוע לפני החתונה התברר שיש בלגן ברשימת המוזמנים, והם הצליחו לסדר הכל בזמן קצר.",
+      "author": "ליאת ויובל",
+      "event": "חתונה, אפריל 2023",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+    }
+  ],
+  "seo": {
+    "title": "המלצות | B&B RSVP",
+    "description": "קראו המלצות מלקוחות מרוצים של B&B RSVP על שירותי אישורי הגעה, ניהול אורחים וצוות קבלת פנים לאירועים.",
+    "keywords": ["המלצות", "לקוחות מרוצים", "חוויות לקוחות", "ביקורות"],
+    "ogImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+  }
+}
