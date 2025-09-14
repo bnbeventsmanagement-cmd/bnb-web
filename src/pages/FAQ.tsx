@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HelpCircle, ChevronDownIcon, ChevronUpIcon, MessageCircle } from 'lucide-react';
 import Seo from '../components/Seo';
 import { organization, localBusiness, faqPage, breadcrumbsFor } from '../seo/structuredData';

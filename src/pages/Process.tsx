@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CoffeeIcon, ClipboardListIcon, UsersIcon, PhoneCallIcon, LayoutGridIcon, CalendarIcon, Play } from 'lucide-react';
 import Seo from '../components/Seo';
 import { organization, localBusiness, serviceRSVP, breadcrumbsFor } from '../seo/structuredData';

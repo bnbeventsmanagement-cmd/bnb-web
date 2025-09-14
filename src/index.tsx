@@ -4,7 +4,7 @@ import { render } from "react-dom";
 import { App } from "./App";
 
 // Initialize axe-core for accessibility testing in development
-if (process.env.NODE_ENV !== 'production') {
+if (import.meta.env.VITE_ENABLE_AXE === 'true' || import.meta.env.DEV) {
   import('@axe-core/react').then((axe) => {
     axe.default(React, render, 1000);
   });

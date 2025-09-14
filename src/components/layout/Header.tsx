@@ -48,7 +48,7 @@ const Header = () => {
           {/* Login Button - Left side */}
           <div className="hidden md:flex items-center order-first">
             <a 
-              href="https://eventsmanagment.com/login" 
+              href={import.meta.env.VITE_LOGIN_URL || "https://eventsmanagment.com/login"} 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
@@ -117,7 +117,7 @@ const Header = () => {
             {/* Mobile Login Button */}
             <div className="flex justify-center mb-4">
               <a 
-                href="https://eventsmanagment.com/login" 
+                href={import.meta.env.VITE_LOGIN_URL || "https://eventsmanagment.com/login"} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"

@@ -9,14 +9,14 @@ export const organization = {
   "logo": "https://www.bnb-rsvp.co.il/og-default.jpg",
   "contactPoint": [{
     "@type": "ContactPoint",
-    "telephone": "+972-50-488-4840",
+    "telephone": import.meta.env.VITE_CONTACT_PHONE || "+972-50-488-4840",
     "contactType": "customer service",
     "areaServed": "IL",
     "availableLanguage": ["he", "en"]
   }],
   "sameAs": [
-    "https://www.instagram.com/bnbevents__",
-    "https://wa.me/972504884840"
+    import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/bnbevents__",
+    import.meta.env.VITE_WHATSAPP_URL || "https://wa.me/972504884840"
   ]
 };
 

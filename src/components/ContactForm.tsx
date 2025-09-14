@@ -40,7 +40,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
       } else {
         return {
           ...prev,
-          [name]: currentValues.filter((item: string) => item !== value)
+          [name]: Array.isArray(currentValues) 
+            ? currentValues.filter((item: string) => item !== value)
+            : currentValues
         };
       }
     });
@@ -48,10 +50,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Form submitted!', formData);
     setIsSubmitting(true);
     try {
       // Create email content with all form data
       const content = createEmailContent(formData);
+      console.log('Email content created:', content);
       
       // Send email automatically using EmailJS (free service)
       await sendEmailAutomatically(formData, content);
@@ -72,7 +76,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
       console.log('Sending form data:', data);
       console.log('Form content:', content);
       
-      // Method 1: Web3Forms (with your access key)
+      // Method 1: Web3Forms (the working method from yesterday)
       const web3formsResponse = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -119,25 +123,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
       
       if (formspreeResponse.ok) {
         console.log('Email sent successfully via Formspree');
-        return;
-      }
-      
-      // Method 3: Simple fetch to a free service
-      const simpleResponse = await fetch('https://httpbin.org/post', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          to: 'bnbeventsmanagement@gmail.com',
-          subject: 'פנייה חדשה מאתר B&B אישורי הגעה',
-          content: content,
-          timestamp: new Date().toISOString()
-        })
-      });
-      
-      if (simpleResponse.ok) {
-        console.log('Data logged successfully (fallback method)');
         return;
       }
       

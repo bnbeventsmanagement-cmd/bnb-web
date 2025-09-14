@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, CheckCircle, ExternalLink } from 'lucide-react';
 import Seo from '../components/Seo';
 import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
@@ -147,25 +146,25 @@ const Accessibility = () => {
                 </p>
                 <div className="space-y-4">
                   <a 
-                    href="https://wa.me/972504884840/?text=היי, נתקלתי בבעיה נגישות באתר" 
+                    href={`${import.meta.env.VITE_WHATSAPP_URL || "https://wa.me/972504884840"}/?text=היי, נתקלתי בבעיה נגישות באתר`} 
                     className="flex items-center gap-3 text-sky-300 hover:text-sky-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <ExternalLink className="h-4 w-4" />
                     <span>דיווח ב-WhatsApp</span>
                   </a>
                   <a 
-                    href="tel:+0504884840" 
+                    href={`tel:${import.meta.env.VITE_CONTACT_PHONE || "+0504884840"}`} 
                     className="flex items-center gap-3 text-sky-300 hover:text-sky-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <ExternalLink className="h-4 w-4" />
-                    <span>התקשרות: 050-488-4840</span>
+                    <span>התקשרות: {import.meta.env.VITE_CONTACT_PHONE || "050-488-4840"}</span>
                   </a>
                   <a 
-                    href="mailto:bnbeventsmanagement@gmail.com" 
+                    href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || "bnbeventsmanagement@gmail.com"}`} 
                     className="flex items-center gap-3 text-sky-300 hover:text-sky-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                   >
                     <ExternalLink className="h-4 w-4" />
-                    <span>bnbeventsmanagement@gmail.com</span>
+                    <span>{import.meta.env.VITE_CONTACT_EMAIL || "bnbeventsmanagement@gmail.com"}</span>
                   </a>
                 </div>
               </div>

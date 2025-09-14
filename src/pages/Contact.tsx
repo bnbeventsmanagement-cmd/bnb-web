@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PhoneIcon, MailIcon, MessageCircle, Send } from 'lucide-react';
 import Seo from '../components/Seo';
 import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';

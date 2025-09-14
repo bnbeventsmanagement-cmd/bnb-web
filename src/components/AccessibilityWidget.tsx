@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Settings, X, Type, Contrast, Underline, Eye, MoveVertical, RotateCcw, Accessibility } from 'lucide-react';
+import { X, Type, Contrast, Underline, Eye, MoveVertical, RotateCcw, Accessibility } from 'lucide-react';
 
 interface AccessibilitySettings {
   fontSize: 'normal' | 'large' | 'xlarge';
@@ -187,7 +187,7 @@ const AccessibilityWidget: React.FC = () => {
                 ].map((option) => (
                   <button
                     key={option.value}
-                    onClick={() => toggleSetting('fontSize', option.value)}
+                    onClick={() => toggleSetting('fontSize', option.value as 'normal' | 'large' | 'xlarge')}
                     className={`px-3 py-2 sm:py-1 text-xs sm:text-sm rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 min-h-[44px] ${
                       settings.fontSize === option.value
                         ? 'bg-sky-500 text-white'

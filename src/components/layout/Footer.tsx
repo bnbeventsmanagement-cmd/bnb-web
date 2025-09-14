@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { InstagramIcon, PhoneIcon, MessageCircle, Heart } from 'lucide-react';
 import { scrollToTop } from '../../utils/scrollToTop';
@@ -62,8 +61,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6 text-white">צרו קשר</h3>
             <div className="space-y-4">
-              <a 
-                href="https://wa.me/972504884840/?text=היי הגעתי דרך האתר אפשר פרטים ?" 
+                      <a
+                        href={`${import.meta.env.VITE_WHATSAPP_URL || "https://wa.me/972504884840"}/?text=היי הגעתי דרך האתר אפשר פרטים ?`}
                 className="flex items-center gap-3 text-blue-100 hover:text-sky-300 transition-colors duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
               >
                 <div className="p-2 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-lg group-hover:animate-glow">
@@ -71,8 +70,8 @@ const Footer = () => {
                 </div>
                 <span>WhatsApp</span>
               </a>
-              <a 
-                href="tel:+0504884840" 
+                      <a
+                        href={`tel:${import.meta.env.VITE_CONTACT_PHONE || "+0504884840"}`}
                 className="flex items-center gap-3 text-blue-100 hover:text-sky-300 transition-colors duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
               >
                 <div className="p-2 bg-gradient-to-br from-sky-500/20 to-blue-600/20 rounded-lg group-hover:animate-glow">
@@ -80,8 +79,8 @@ const Footer = () => {
                 </div>
                 <span>טלפון</span>
               </a>
-              <a 
-                href="https://www.instagram.com/bnbevents__?igsh=MWFrY2JxdTF3ZjRyYw%3D%3D&utm_source=qr" 
+                      <a
+                        href={import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/bnbevents__?igsh=MWFrY2JxdTF3ZjRyYw%3D%3D&utm_source=qr"}
                 className="flex items-center gap-3 text-blue-100 hover:text-sky-300 transition-colors duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
                 target="_blank"
                 rel="noopener noreferrer"
