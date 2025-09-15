@@ -11,7 +11,7 @@ import Vendors from './pages/Vendors';
 import Testimonials from './pages/Testimonials';
 import Accessibility from './pages/Accessibility';
 
-export function App() {
+export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
