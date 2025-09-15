@@ -1,5 +1,5 @@
 {
-  "builds": [{ "src": "index.html", "use": "@vercel/static-build" }],
+  "builds": [{ "src": "package.json", "use": "@vercel/static-build" }],
   "routes": [
     { "src": "/(manifest\\.json|favicon\\.svg|favicon\\.ico|robots\\.txt|sitemap\\.xml|logo-bb\\.svg|icon\\.png|apple-touch-icon\\.png)", "dest": "/$1" },
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
