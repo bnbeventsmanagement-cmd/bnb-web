@@ -1,20 +1,32 @@
 {
-  "cleanUrls": true,
-  "headers": [
+  "routes": [
     {
-      "source": "/manifest.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/manifest+json"
-        }
-      ]
-    }
-  ],
-  "rewrites": [
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
     {
-      "source": "/((?!assets|favicon\\.svg|logo-bb\\.svg|manifest\\.json|robots\\.txt|sitemap\\.xml).*)",
-      "destination": "/index.html"
+      "src": "/favicon.svg",
+      "dest": "/favicon.svg"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/manifest.json"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml"
+    },
+    {
+      "src": "/logo-bb.svg",
+      "dest": "/logo-bb.svg"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
