@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UsersIcon, LayoutGridIcon, ArrowLeft, Sparkles, CheckCircle, Mail, Gift, MapPin, MessageSquare, Bell, Users, Star as StarIcon, CreditCard, FileText, Download, Smartphone, DollarSign, Briefcase, Baby, Star as StarIcon2, Heart, ArrowRight } from 'lucide-react';
-import Seo from '../components/Seo';
+import Seo from '../components/Seo.tsx';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import { scrollToTop } from '../utils/scrollToTop';
 // Import home data
