@@ -14,11 +14,15 @@ const Footer = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-sky-400/20 to-blue-600/20 rounded-lg blur-lg group-hover:blur-xl transition-all duration-300"></div>
                 <img 
-                  src="https://bnb-rsvp.com/wp-content/uploads/2024/09/307995278_223217960041190_7001359417631391334_n-1.jpg" 
+                  src="./images/logo-bnb.svg"
                   alt="B&B אישורי הגעה לאירועים - לוגו החברה" 
                   className="relative h-16 w-auto bg-white/10 backdrop-blur-sm p-2 rounded-lg mb-6 group-hover:scale-105 transition-transform duration-300" 
                   loading="lazy"
                   decoding="async"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = './logo-bb.svg';
+                  }}
                 />
               </div>
             </Link>
@@ -57,6 +61,27 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Legal Information */}
+          <div>
+            <h3 className="text-xl font-bold mb-6 text-white">מידע משפטי</h3>
+            <ul className="space-y-3">
+              {[
+                { name: 'תקנון ותנאי שימוש', href: '/legal/terms' },
+                { name: 'מדיניות פרטיות', href: '/legal/privacy' }
+              ].map(item => (
+                <li key={item.name}>
+                  <Link 
+                    to={item.href} 
+                    onClick={scrollToTop}
+                    className="text-blue-100 hover:text-sky-300 transition-colors duration-300 hover:translate-x-2 transform inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-white">צרו קשר</h3>
@@ -77,7 +102,10 @@ const Footer = () => {
                 <div className="p-2 bg-gradient-to-br from-sky-500/20 to-blue-600/20 rounded-lg group-hover:animate-glow">
                   <PhoneIcon className="h-5 w-5" />
                 </div>
-                <span>טלפון</span>
+                <div className="flex flex-col">
+                  <span>טלפון</span>
+                  <span className="text-sm text-sky-200">{import.meta.env.VITE_CONTACT_PHONE || "050-488-4840"}</span>
+                </div>
               </a>
                       <a
                         href={import.meta.env.VITE_INSTAGRAM_URL || "https://www.instagram.com/bnbevents__?igsh=MWFrY2JxdTF3ZjRyYw%3D%3D&utm_source=qr"}

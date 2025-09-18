@@ -15,7 +15,7 @@
 
 שם מלא: יוסי כהן
 טלפון: 050-123-4567
-אימייל: yossi@example.com
+אימייל: bnbeventsmanagement@gmail.com
 שירותים: אישורי הגעה, הושבה ודיילות
 תאריך האירוע: 15/10/2025
 מספר מוזמנים: 150
@@ -46,12 +46,12 @@ https://bnb-rsvp.com
 
 ### שינוי כתובת המייל:
 ```javascript
-const mailtoLink = `mailto:YOUR_EMAIL@example.com?subject=...`;
+const mailtoLink = `mailto:bnbeventsmanagement@gmail.com?subject=...`;
 ```
 
 ### הוספת CC או BCC:
 ```javascript
-const mailtoLink = `mailto:bnbeventsmanagement@gmail.com?cc=manager@example.com&subject=...`;
+const mailtoLink = `mailto:bnbeventsmanagement@gmail.com?cc=bnbeventsmanagement@gmail.com&subject=...`;
 ```
 
 ### הוספת קבצים מצורפים:

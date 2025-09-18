@@ -1,7 +1,7 @@
 {
   "heroTitle": "אישורי הגעה והושבה לאירועים",
   "subtitle": "שירות מקצועי לניהול הזמנות, אישורי הגעה וסידור הושבה לאירועים",
-  "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+  "image": "./images/logo-bnb.svg",
   "ctaButton": "צרו קשר עכשיו",
   "features": [
     {
@@ -34,6 +34,6 @@
     "title": "אישורי הגעה והושבה לאירועים | B&B RSVP",
     "description": "B&B RSVP מספקת שירותי אישורי הגעה והושבה מקצועיים, ניהול אורחים וצוות קבלת פנים לאירועים ברמה הגבוהה ביותר.",
     "keywords": ["אישורי הגעה לחתונה", "סידור הושבה", "ניהול אורחים", "סידור שולחנות", "צוות קבלת פנים"],
-    "ogImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+    "ogImage": "./images/logo-bnb.svg"
   }
 }

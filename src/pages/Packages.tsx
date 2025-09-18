@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckIcon, Package, Star, Crown, Shield, Zap } from 'lucide-react';
-// import Seo from '../components/Seo';
-// import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
+import Seo from '../components/Seo';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import { scrollToTop } from '../utils/scrollToTop';
 // Import packages data
@@ -19,7 +18,20 @@ const Packages = () => {
 
   return (
     <>
-      {/* SEO temporarily disabled for build */}
+      <Seo
+        title="החבילות שלנו - B&B אישורי הגעה והושבה"
+        description="גלו את מגוון החבילות של B&B RSVP לשירותי אישורי הגעה, ניהול אורחים וצוות קבלת פנים לאירועים."
+        keywords={['חבילות אישורי הגעה', 'מחירים', 'שירותים לאירועים', 'חבילת RSVP']}
+        url="https://www.bnb-rsvp.com/packages"
+        type="website"
+        structuredData={{
+          type: 'breadcrumb',
+          breadcrumbs: [
+            { name: 'בית', url: '/' },
+            { name: 'חבילות', url: '/packages' }
+          ]
+        }}
+      />
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-20 md:py-32 relative overflow-hidden border-b border-slate-100">
@@ -28,9 +40,9 @@ const Packages = () => {
             <div className="flex justify-center mb-6 animate-fadeInUp">
               <Package className="h-12 w-12 text-sky-700" />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeInUp delay-100">
-              <span className="bg-gradient-to-r from-[#1e3a8a] to-[#2563eb] bg-clip-text text-transparent">{data.title.split(' ')[0]}</span>
-              <span className="text-[#111]"> {data.title.split(' ').slice(1).join(' ')} </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeInUp delay-100 hover:scale-110 transition-all duration-500 cursor-pointer">
+              <span className="bg-gradient-to-r from-[#1e3a8a] to-[#2563eb] bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-500">{data.title.split(' ')[0]}</span>
+              <span className="text-[#111] hover:text-sky-600 hover:scale-105 transition-all duration-300"> {data.title.split(' ').slice(1).join(' ')} </span>
             </h1>
             <p className="text-xl max-w-3xl mx-auto text-[#222] leading-relaxed mb-8 animate-fadeInUp delay-200">
               {data.subtitle}
@@ -86,7 +98,7 @@ const Packages = () => {
                       ) : (
                         <Package className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-sky-400 animate-float mb-2" />
                       )}
-                      <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white group-hover:text-sky-300 transition-colors mb-2">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white group-hover:text-sky-300 group-hover:scale-110 group-hover:font-extrabold transition-all duration-300 mb-2 cursor-pointer">
                         {item.name}
                       </h3>
                       <p className="text-blue-100 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base lg:text-lg">{item.description}</p>
@@ -141,7 +153,7 @@ const Packages = () => {
               <div className="flex justify-center mb-6">
                 <Crown className="h-12 w-12 text-sky-300 animate-glow" aria-hidden="true" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text hover:scale-110 hover:text-purple-600 transition-all duration-500 cursor-pointer">
                 מחפשים חבילה מותאמת אישית?
               </h2>
               <p className="mb-8 max-w-2xl mx-auto text-blue-100 leading-relaxed text-lg">

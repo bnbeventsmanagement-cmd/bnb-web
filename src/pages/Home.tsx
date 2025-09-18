@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UsersIcon, LayoutGridIcon, ArrowLeft, Sparkles, CheckCircle, Mail, Gift, MapPin, MessageSquare, Bell, Users, Star as StarIcon, CreditCard, FileText, Download, Smartphone, DollarSign, Briefcase, Baby, Star as StarIcon2, Heart, ArrowRight } from 'lucide-react';
-// import Seo from '../components/Seo';
-// import { organization, localBusiness, webSite, breadcrumbsFor } from '../seo/structuredData';
+import Seo from '../components/Seo';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import { scrollToTop } from '../utils/scrollToTop';
 // Import home data
@@ -70,7 +69,27 @@ const Home = () => {
 
   return (
     <>
-      {/* SEO temporarily disabled for build */}
+      <Seo
+        title={data.seo?.title}
+        description={data.seo?.description}
+        keywords={data.seo?.keywords}
+        image={data.seo?.ogImage}
+        url="https://www.bnb-rsvp.com/"
+        type="website"
+        structuredData={{
+          type: 'faq',
+          data: { faqs: [
+            {
+              question: "עפ\"י מה המחיר נקבע?",
+              answer: "המחיר נקבע לפי מספר הרשומות (כמות מספרי הטלפון) שיש לך וצריך לאשר ולבדוק איתם הגעה."
+            },
+            {
+              question: "האם יש אפשרות להעלות למערכת אנשים שאני יודע שמגיעים?",
+              answer: "כמובן! כל עוד לא מתקשרים או שולחים להם הודעות, אפשר להעלות אותם למערכת."
+            }
+          ]}
+        }}
+      />
       
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden bg-white">
@@ -110,16 +129,16 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1 animate-fadeInUp text-gray-800 text-center md:text-right">
-              <div className="flex items-center justify-center md:justify-start gap-2 mb-4 animate-slideInRight">
-                <Sparkles className="h-6 w-6 text-sky-600 animate-pulse" aria-hidden="true" />
-                <span className="text-sky-700 font-medium">שירותי אירועים מקצועיים</span>
+              <div className="flex items-center justify-center md:justify-start gap-2 mb-4 animate-slideInRight group">
+                <Sparkles className="h-6 w-6 text-sky-600 animate-pulse group-hover:animate-spin group-hover:text-purple-500 transition-all duration-500" aria-hidden="true" />
+                <span className="text-sky-700 font-medium hover:text-purple-600 hover:scale-110 hover:font-bold transition-all duration-300 cursor-pointer">שירותי אירועים מקצועיים</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fadeInUp delay-100">
-                <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent animate-gradient-x">אישורי</span>
-                <span className="text-gray-800"> הגעה והושבה </span>
-                <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient-x">לאירועים</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fadeInUp delay-100 group">
+                <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent animate-gradient-x hover:scale-110 hover:text-purple-600 transition-all duration-500 cursor-pointer inline-block">אישורי</span>
+                <span className="text-gray-800 hover:text-sky-600 hover:scale-105 transition-all duration-300 cursor-pointer inline-block mx-2">הגעה והושבה</span>
+                <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient-x hover:scale-110 hover:text-pink-600 transition-all duration-500 cursor-pointer inline-block">לאירועים</span>
               </h1>
-              <p className="text-lg sm:text-xl mb-8 opacity-90 text-gray-700 leading-relaxed animate-fadeInUp delay-200">שירות מקצועי לניהול הזמנות, אישורי הגעה וסידור הושבה לאירועים</p>
+              <p className="text-lg sm:text-xl mb-8 opacity-90 text-gray-700 leading-relaxed animate-fadeInUp delay-200 hover:text-sky-600 hover:scale-105 hover:font-semibold transition-all duration-500 cursor-pointer">שירות מקצועי לניהול הזמנות, אישורי הגעה וסידור הושבה לאירועים</p>
               <div className="flex justify-center md:justify-start">
               <Link 
                 to="/contact" 
@@ -133,40 +152,35 @@ const Home = () => {
             </div>
             <div className="order-1 md:order-2 animate-scaleIn delay-200 flex justify-center">
               <div className="relative animate-fadeInUp delay-300 max-w-md md:max-w-lg lg:max-w-xl">
-                {/* Multiple glowing rings around the logo */}
-                <div className="absolute inset-0 bg-gradient-to-r from-sky-400/20 to-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
-                <div className="absolute inset-2 bg-gradient-to-r from-blue-400/15 to-cyan-500/15 rounded-full blur-xl animate-pulse delay-1000"></div>
-                <div className="absolute inset-4 bg-gradient-to-r from-cyan-400/10 to-sky-500/10 rounded-full blur-lg animate-pulse delay-2000"></div>
                 
-                {/* Floating particles around the logo */}
-                <div className="absolute -top-4 -left-4 w-3 h-3 bg-sky-400/60 rounded-full animate-bounce delay-500"></div>
-                <div className="absolute -top-2 -right-6 w-2 h-2 bg-blue-400/60 rounded-full animate-bounce delay-1000"></div>
-                <div className="absolute -bottom-4 -left-2 w-2.5 h-2.5 bg-cyan-400/60 rounded-full animate-bounce delay-1500"></div>
-                <div className="absolute -bottom-2 -right-4 w-2 h-2 bg-sky-400/60 rounded-full animate-bounce delay-2000"></div>
-                
-                {/* Main logo - transparent and floating */}
-                <div className="relative animate-fadeInUp delay-400">
-                  {/* Logo image - transparent background */}
+                {/* Main logo with effects */}
+                <div className="relative animate-fadeInUp delay-400 group">
+                  {/* Glowing background effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 group-hover:scale-110"></div>
+                  
+                  {/* Rotating ring around logo */}
+                  <div className="absolute inset-0 border-2 border-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full animate-spin-slow group-hover:animate-spin"></div>
+                  
+                  {/* Logo with hover effects */}
                   <img 
-                    src="https://bnb-rsvp.com/wp-content/uploads/2024/09/307995278_223217960041190_7001359417631391334_n-1.jpg" 
+                    src="./images/logo-bnb.svg" 
                     alt="B&B אישורי הגעה לאירועים - לוגו החברה" 
-                    className="relative w-full h-auto rounded-2xl shadow-2xl animate-float-slow hover:animate-glow transition-all duration-500 hover:scale-105 bg-transparent" 
+                    className="relative w-full h-auto animate-spin-slow group-hover:scale-110 group-hover:animate-spin transition-all duration-500 ease-out filter group-hover:brightness-110 group-hover:contrast-110 group-hover:drop-shadow-2xl" 
                     loading="eager"
                     decoding="async"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = './logo-bb.svg';
+                    }}
                   />
                   
-                  {/* Sparkle effects on the logo */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-yellow-400 rounded-full animate-ping"></div>
-                  <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping delay-1000"></div>
-                  <div className="absolute top-1/2 left-4 w-1 h-1 bg-green-400 rounded-full animate-ping delay-2000"></div>
-                  <div className="absolute bottom-4 right-8 w-1.5 h-1.5 bg-purple-400 rounded-full animate-ping delay-3000"></div>
+                  {/* Floating particles around logo */}
+                  <div className="absolute -top-4 -left-4 w-2 h-2 bg-blue-400/60 rounded-full animate-bounce delay-500 group-hover:animate-ping"></div>
+                  <div className="absolute -top-2 -right-6 w-1.5 h-1.5 bg-purple-400/60 rounded-full animate-bounce delay-1000 group-hover:animate-ping"></div>
+                  <div className="absolute -bottom-4 -left-2 w-2 h-2 bg-pink-400/60 rounded-full animate-bounce delay-1500 group-hover:animate-ping"></div>
+                  <div className="absolute -bottom-2 -right-4 w-1.5 h-1.5 bg-cyan-400/60 rounded-full animate-bounce delay-2000 group-hover:animate-ping"></div>
                 </div>
                 
-                {/* Additional floating elements */}
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full animate-float-slow opacity-60"></div>
-                <div className="absolute -bottom-8 right-1/4 w-3 h-3 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full animate-float-delayed opacity-60"></div>
-                <div className="absolute -left-8 top-1/3 w-2 h-2 bg-gradient-to-r from-cyan-400 to-sky-500 rounded-full animate-float-slow delay-1000 opacity-60"></div>
-                <div className="absolute -right-8 bottom-1/3 w-3 h-3 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full animate-float-delayed delay-500 opacity-60"></div>
               </div>
             </div>
           </div>
@@ -232,7 +246,7 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <AnimateOnScroll>
             <div className="text-center mb-16">
-              <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-6 gradient-text">
+              <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-6 gradient-text hover:scale-110 hover:text-purple-600 transition-all duration-500 cursor-pointer">
                 השירותים שלנו
               </h2>
               <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full"></div>
@@ -248,7 +262,7 @@ const Home = () => {
                       {getIcon(feature.icon)}
                     </div>
                   </div>
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 lg:mb-4 text-white group-hover:text-sky-300 transition-colors text-center">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 lg:mb-4 text-white group-hover:text-sky-300 group-hover:scale-110 group-hover:font-extrabold transition-all duration-300 text-center cursor-pointer">
                     {feature.title}
                   </h3>
                   <p className="text-blue-100 leading-relaxed text-xs sm:text-sm lg:text-base text-center">{feature.description}</p>
@@ -296,7 +310,7 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <AnimateOnScroll>
             <div className="text-center mb-8 sm:mb-16">
-              <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800">
+              <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800 hover:text-sky-600 hover:scale-110 hover:font-extrabold transition-all duration-500 cursor-pointer">
                 שירותים נוספים
               </h2>
               <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-yellow-400 to-pink-500 mx-auto rounded-full"></div>
@@ -333,7 +347,7 @@ const Home = () => {
                     
                     {/* Title - Fixed Size Container */}
                     <div className="w-full h-[24px] sm:h-[54px] md:h-[60px] lg:h-[66px] flex items-center justify-center px-1">
-                      <h3 className="text-[8px] sm:text-base md:text-lg lg:text-xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300 leading-tight text-center">
+                      <h3 className="text-[8px] sm:text-base md:text-lg lg:text-xl font-bold text-white group-hover:text-yellow-300 group-hover:scale-110 group-hover:font-extrabold transition-all duration-300 leading-tight text-center cursor-pointer">
                         {service.name}
                       </h3>
                     </div>
@@ -372,8 +386,8 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <AnimateOnScroll>
             <div className="text-center mb-16">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-6 whitespace-nowrap">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-gradient-x">אז מה אתם חוגגים?</span>
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-6 whitespace-nowrap hover:scale-110 transition-all duration-500 cursor-pointer">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-gradient-x hover:from-pink-400 hover:via-purple-400 hover:to-cyan-400 transition-all duration-500">אז מה אתם חוגגים?</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 ב-B&B ההזמנה הדיגיטלית מותאמת בדיוק לסוג האירוע שלכם
@@ -390,7 +404,7 @@ const Home = () => {
                 icon: Briefcase, 
                 color: "from-blue-500 to-cyan-500",
                 buttonText: "להרשמה בחינם",
-                image: "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                image: "./images/logo-bnb.svg"
               },
               { 
                 title: "בריתות", 
@@ -398,7 +412,7 @@ const Home = () => {
                 icon: Baby, 
                 color: "from-pink-500 to-rose-500",
                 buttonText: "למידע נוסף",
-                image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                image: "./images/logo-bnb.svg"
               },
               { 
                 title: "בר/ת מצווה", 
@@ -406,7 +420,7 @@ const Home = () => {
                 icon: StarIcon2, 
                 color: "from-purple-500 to-indigo-500",
                 buttonText: "למידע נוסף",
-                image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                image: "./images/logo-bnb.svg"
               },
               { 
                 title: "חתונות", 
@@ -414,7 +428,7 @@ const Home = () => {
                 icon: Heart, 
                 color: "from-red-500 to-pink-500",
                 buttonText: "למידע נוסף",
-                image: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                image: "./images/logo-bnb.svg"
               }
             ].map((event, index) => (
               <AnimateOnScroll key={index}>
@@ -509,10 +523,10 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <AnimateOnScroll>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x">הענקת מתנה</span>
-                <span className="text-gray-800"> באמצעות </span>
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient-x">B&B</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6 hover:scale-110 transition-all duration-500 cursor-pointer">
+                <span className="bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent animate-gradient-x hover:from-pink-600 hover:via-purple-600 hover:to-blue-600 transition-all duration-500">הענקת מתנה</span>
+                <span className="text-gray-800 hover:text-sky-600 hover:scale-105 transition-all duration-300"> באמצעות </span>
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient-x hover:from-blue-600 hover:via-pink-600 hover:to-purple-600 transition-all duration-500">B&B</span>
               </h2>
               <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full"></div>
             </div>
@@ -618,8 +632,8 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <AnimateOnScroll>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                <span className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent animate-gradient-x">חגגו ונשארו כדי לספר...</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6 hover:scale-110 transition-all duration-500 cursor-pointer">
+                <span className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent animate-gradient-x hover:from-purple-600 hover:via-green-600 hover:to-blue-600 transition-all duration-500">חגגו ונשארו כדי לספר...</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 ביקורות אמיתיות מלקוחותינו המרוצים
@@ -700,7 +714,7 @@ const Home = () => {
               <div className="flex justify-center mb-6 animate-fadeInUp">
                 <Heart className="h-12 w-12 text-sky-400" />
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text hover:scale-110 hover:text-purple-600 transition-all duration-500 cursor-pointer">
                 שאלות נפוצות
               </h2>
               <p className="text-xl text-blue-100 leading-relaxed mb-8">
@@ -711,12 +725,12 @@ const Home = () => {
 
           <div className="max-w-3xl mx-auto">
             <AnimateOnScroll>
-              <div className="glass-card p-6 sm:p-8 mb-8">
+              <div className="glass-card p-6 sm:p-8 mb-16">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-blue-500 rounded-full flex items-center justify-center">
                     <span className="text-white text-lg font-bold">?</span>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white">
+                  <h3 className="text-lg sm:text-xl font-bold text-white hover:text-sky-300 hover:scale-105 hover:font-extrabold transition-all duration-300 cursor-pointer">
                     עפ"י מה המחיר נקבע?
                   </h3>
                 </div>
@@ -731,13 +745,15 @@ const Home = () => {
               </div>
             </AnimateOnScroll>
 
+            <div className="mb-8"></div>
+
             <AnimateOnScroll>
-              <div className="glass-card p-6 sm:p-8 mb-8">
+              <div className="glass-card p-6 sm:p-8 mb-16">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-sky-400 to-blue-500 rounded-full flex items-center justify-center">
                     <span className="text-white text-lg font-bold">?</span>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white">
+                  <h3 className="text-lg sm:text-xl font-bold text-white hover:text-sky-300 hover:scale-105 hover:font-extrabold transition-all duration-300 cursor-pointer">
                     האם יש אפשרות להעלות למערכת אנשים שאני יודע שמגיעים?
                   </h3>
                 </div>
@@ -770,7 +786,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-sky-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
         <div className="container-custom text-center relative z-10">
           <AnimateOnScroll>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8">מוכנים להתחיל?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 hover:scale-110 hover:text-sky-300 transition-all duration-500 cursor-pointer">מוכנים להתחיל?</h2>
             <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90 text-blue-100 leading-relaxed">
               צרו איתנו קשר עוד היום כדי לקבל הצעת מחיר מותאמת אישית לאירוע שלכם.
             </p>

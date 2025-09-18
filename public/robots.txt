@@ -1,3 +1,15 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.bnb-rsvp.co.il/sitemap.xml
+
+# Block admin and private areas
+Disallow: /admin/
+Disallow: /panel/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /assets/
+
+# Allow important pages
+Allow: /images/
+Allow: /legal/
+
+Sitemap: https://www.bnb-rsvp.com/sitemap.xml

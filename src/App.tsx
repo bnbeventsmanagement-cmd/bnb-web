@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import Vendors from './pages/Vendors';
 import Testimonials from './pages/Testimonials';
 import Accessibility from './pages/Accessibility';
+import Terms from './pages/legal/Terms';
+import Privacy from './pages/legal/Privacy';
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
             <Route path="/vendors" element={<Vendors />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/legal/terms" element={<Terms />} />
+            <Route path="/legal/privacy" element={<Privacy />} />
           </Routes>
         </Layout>
       </BrowserRouter>

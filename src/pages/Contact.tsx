@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { PhoneIcon, MailIcon, MessageCircle, Send } from 'lucide-react';
-// import Seo from '../components/Seo';
-// import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
+import Seo from '../components/Seo';
 import ContactForm from '../components/ContactForm';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import contact data
@@ -18,7 +17,20 @@ const Contact = () => {
 
   return (
     <>
-      {/* SEO temporarily disabled for build */}
+      <Seo
+        title="צור קשר - B&B אישורי הגעה והושבה"
+        description="צרו איתנו קשר לקבלת הצעת מחיר מותאמת אישית לאירוע שלכם. B&B RSVP - שירותי אירועים מקצועיים."
+        keywords={['צור קשר', 'הצעת מחיר', 'ייעוץ אירועים', 'B&B קשר']}
+        url="https://www.bnb-rsvp.com/contact"
+        type="website"
+        structuredData={{
+          type: 'breadcrumb',
+          breadcrumbs: [
+            { name: 'בית', url: '/' },
+            { name: 'צור קשר', url: '/contact' }
+          ]
+        }}
+      />
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-20 md:py-32 relative overflow-hidden border-b border-slate-100">
@@ -27,9 +39,9 @@ const Contact = () => {
             <div className="flex justify-center mb-6 animate-fadeInUp">
               <MessageCircle className="h-12 w-12 text-green-600" />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeInUp delay-100">
-              <span className="bg-gradient-to-r from-[#1e3a8a] to-[#2563eb] bg-clip-text text-transparent">{data.title.split(' ')[0]}</span>
-              <span className="text-[#111]"> {data.title.split(' ').slice(1).join(' ')} </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeInUp delay-100 hover:scale-110 transition-all duration-500 cursor-pointer">
+              <span className="bg-gradient-to-r from-[#1e3a8a] to-[#2563eb] bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-500">{data.title.split(' ')[0]}</span>
+              <span className="text-[#111] hover:text-sky-600 hover:scale-105 transition-all duration-300"> {data.title.split(' ').slice(1).join(' ')} </span>
             </h1>
             <p className="text-xl max-w-3xl mx-auto text-[#222] leading-relaxed mb-8 animate-fadeInUp delay-200">
               {data.subtitle}
@@ -80,7 +92,7 @@ const Contact = () => {
                         <h3 className="font-bold mb-2 text-white group-hover:text-sky-300 transition-colors">טלפון</h3>
                         <a 
                           href={`tel:+${data.phoneNumber}`} 
-                          className="text-sky-300 hover:text-white transition-colors"
+                          className="text-sky-300 hover:text-white transition-colors text-lg font-medium"
                         >
                           {data.phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')}
                         </a>

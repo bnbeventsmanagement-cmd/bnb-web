@@ -5,8 +5,8 @@ export const organization = {
   "@type": "Organization",
   "name": "B&B אישורי הגעה",
   "alternateName": "B&B RSVP",
-  "url": "https://www.bnb-rsvp.co.il/",
-  "logo": "https://www.bnb-rsvp.co.il/og-default.jpg",
+  "url": "https://www.bnb-rsvp.com/",
+  "logo": "./images/logo-bnb.svg",
   "contactPoint": [{
     "@type": "ContactPoint",
     "telephone": import.meta.env.VITE_CONTACT_PHONE || "+972-50-488-4840",
@@ -24,8 +24,8 @@ export const localBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "B&B אישורי הגעה",
-  "url": "https://www.bnb-rsvp.co.il/",
-  "image": "https://www.bnb-rsvp.co.il/og-default.jpg",
+  "url": "https://www.bnb-rsvp.com/",
+  "image": "./images/logo-bnb.svg",
   "telephone": "+972-50-488-4840",
   "address": { 
     "@type": "PostalAddress", 
@@ -102,7 +102,7 @@ export const breadcrumbsFor = (items: {name: string, url: string}[]) => ({
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": `https://www.bnb-rsvp.co.il${item.url}`
+    "item": `https://www.bnb-rsvp.com${item.url}`
   }))
 });
 
@@ -111,10 +111,10 @@ export const webSite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "B&B אישורי הגעה",
-  "url": "https://www.bnb-rsvp.co.il/",
+  "url": "https://www.bnb-rsvp.com/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://www.bnb-rsvp.co.il/search?q={query}",
+    "target": "https://www.bnb-rsvp.com/search?q={query}",
     "query-input": "required name=query"
   }
 };

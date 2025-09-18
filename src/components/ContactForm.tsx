@@ -50,6 +50,14 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check if privacy agreement is checked
+    const privacyCheckbox = document.getElementById('privacy-agreement') as HTMLInputElement;
+    if (!privacyCheckbox?.checked) {
+      alert('אנא סמן/י את תיבת ההסכמה לקבלת מידע נוסף');
+      return;
+    }
+    
     console.log('Form submitted!', formData);
     setIsSubmitting(true);
     try {
@@ -76,11 +84,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
       console.log('Sending form data:', data);
       console.log('Form content:', content);
       
-      // Method 1: Web3Forms (the working method from yesterday)
+      // Method 1: Web3Forms (primary method - works in production)
       const web3formsResponse = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify({
           access_key: '7d7dcc9e-3c6a-4768-b0fa-1bb4da118da6', // Web3Forms access key
@@ -93,20 +102,26 @@ const ContactForm: React.FC<ContactFormProps> = ({
           'הערות נוספות': data.notes || '',
           'תוכן מלא': content,
           subject: 'פנייה חדשה מאתר B&B אישורי הגעה',
-          to: 'bnbeventsmanagement@gmail.com'
+          to: 'bnbeventsmanagement@gmail.com',
+          from_name: 'B&B Website Contact Form'
         })
       });
       
-      if (web3formsResponse.ok) {
-        console.log('Email sent successfully via Web3Forms');
+      const web3formsResult = await web3formsResponse.json();
+      
+      if (web3formsResponse.ok && web3formsResult.success) {
+        console.log('Email sent successfully via Web3Forms:', web3formsResult);
         return;
       }
+      
+      console.log('Web3Forms failed, trying Formspree...');
       
       // Method 2: Formspree (fallback)
       const formspreeResponse = await fetch('https://formspree.io/f/xpwgqkzw', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify({
           'שם מלא': data.fullName || '',
@@ -117,21 +132,23 @@ const ContactForm: React.FC<ContactFormProps> = ({
           'שירותים': Array.isArray(data.services) ? data.services.join(', ') : data.services || '',
           'הערות נוספות': data.notes || '',
           'תוכן מלא': content,
-          _subject: 'פנייה חדשה מאתר B&B אישורי הגעה'
+          _subject: 'פנייה חדשה מאתר B&B אישורי הגעה',
+          _replyto: 'bnbeventsmanagement@gmail.com'
         })
       });
       
+      const formspreeResult = await formspreeResponse.json();
+      
       if (formspreeResponse.ok) {
-        console.log('Email sent successfully via Formspree');
+        console.log('Email sent successfully via Formspree:', formspreeResult);
         return;
       }
       
-      throw new Error('All email methods failed');
+      throw new Error(`All email methods failed. Web3Forms: ${web3formsResult.message || 'Unknown error'}, Formspree: ${formspreeResult.error || 'Unknown error'}`);
       
     } catch (error) {
       console.error('Error sending email:', error);
-      // Don't throw error - just log it and continue
-      console.log('Continuing without email sending...');
+      throw error; // Re-throw to show error to user
     }
   };
 
@@ -267,6 +284,23 @@ const ContactForm: React.FC<ContactFormProps> = ({
               )}
             </div>
           ))}
+          
+          {/* Privacy Agreement Checkbox */}
+          <div className="form-control">
+            <div className="flex items-start gap-3 group">
+              <input 
+                type="checkbox" 
+                id="privacy-agreement" 
+                name="privacy-agreement" 
+                required
+                className="h-5 w-5 text-sky-500 focus:ring-sky-500 mt-1 bg-white/10 border-white/20 rounded" 
+              />
+              <label htmlFor="privacy-agreement" className="text-blue-100 group-hover:text-white transition-colors cursor-pointer text-sm leading-relaxed">
+                אני מסכים/ה לקבל מידע נוסף על השירותים והחבילות של B&B אישורי הגעה והושבה בע״מ באמצעות דואר אלקטרוני, הודעות SMS ו/או WhatsApp, בהתאם למדיניות הפרטיות של החברה.
+                <span className="text-red-400 mr-1">*</span>
+              </label>
+            </div>
+          </div>
           
           {submitStatus === 'error' && (
             <div className="flex items-center gap-3 text-red-400 text-center py-4 bg-red-500/10 rounded-xl border border-red-500/20" role="alert" aria-live="polite">

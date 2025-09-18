@@ -41,7 +41,7 @@
 ```
 Subject: פנייה חדשה מאתר B&B אישורי הגעה
 
-From: יוסי כהן <yossi@example.com>
+From: יוסי כהן <bnbeventsmanagement@gmail.com>
 Phone: 050-123-4567
 Services: אישורי הגעה, הושבה ודיילות
 Event Date: 15/10/2025
@@ -55,7 +55,7 @@ Full Details:
 תאריך ושעה: 12/9/2025, 20:35:42
 שם: יוסי כהן
 טלפון: 050-123-4567
-אימייל: yossi@example.com
+אימייל: bnbeventsmanagement@gmail.com
 שירותים: אישורי הגעה, הושבה ודיילות
 תאריך אירוע: 15/10/2025
 מספר מוזמנים: 150

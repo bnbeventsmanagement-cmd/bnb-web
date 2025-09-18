@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { HelpCircle, ChevronDownIcon, ChevronUpIcon, MessageCircle } from 'lucide-react';
-// import Seo from '../components/Seo';
-// import { organization, localBusiness, faqPage, breadcrumbsFor } from '../seo/structuredData';
+import Seo from '../components/Seo';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import FAQ data
 import faqData from '../cms/data/faq.json';
@@ -26,7 +25,17 @@ const FAQ = () => {
 
   return (
     <>
-      {/* SEO temporarily disabled for build */}
+      <Seo
+        title="שאלות נפוצות - B&B אישורי הגעה והושבה"
+        description="כל מה שאתם צריכים לדעת על שירותי B&B RSVP. שאלות ותשובות על אישורי הגעה, ניהול אורחים וצוות קבלת פנים."
+        keywords={['שאלות נפוצות', 'FAQ', 'מידע על שירותים', 'תשובות']}
+        url="https://www.bnb-rsvp.com/faq"
+        type="website"
+        structuredData={{
+          type: 'faq',
+          data: { faqs: data.faqs }
+        }}
+      />
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-12 sm:py-16 md:py-20 lg:py-32 relative overflow-hidden border-b border-slate-100">
@@ -54,7 +63,7 @@ const FAQ = () => {
           <div className="max-w-4xl mx-auto">
             {data.faqs.map((faq, index) => (
               <AnimateOnScroll key={index}>
-                <div className="mb-6 last:mb-0">
+                <div className="mb-16 last:mb-0">
                   {/* FAQ Item */}
                   <div className="glass-card overflow-hidden hover:animate-float group transition-all duration-300">
                     {/* Question Header */}

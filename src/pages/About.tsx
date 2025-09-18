@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AwardIcon, ShieldIcon, HeartIcon, TargetIcon, Star } from 'lucide-react';
-// import Seo from '../components/Seo';
-// import { organization, localBusiness, breadcrumbsFor } from '../seo/structuredData';
+import Seo from '../components/Seo';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import about data
 import aboutData from '../cms/data/about.json';
@@ -33,7 +32,20 @@ const About = () => {
 
   return (
     <>
-      {/* SEO temporarily disabled for build */}
+      <Seo
+        title="אודות B&B אישורי הגעה והושבה"
+        description="למדו על B&B RSVP - החברה המובילה בישראל לשירותי אישורי הגעה, ניהול אורחים וצוות קבלת פנים לאירועים."
+        keywords={['אודות B&B', 'חברת אירועים', 'שירותי RSVP', 'ניהול אירועים']}
+        url="https://www.bnb-rsvp.com/about"
+        type="website"
+        structuredData={{
+          type: 'breadcrumb',
+          breadcrumbs: [
+            { name: 'בית', url: '/' },
+            { name: 'אודות', url: '/about' }
+          ]
+        }}
+      />
       
       {/* Header */}
       <section className="bg-white text-[#1e293b] py-20 md:py-32 relative overflow-hidden border-b border-slate-100">
@@ -42,9 +54,9 @@ const About = () => {
             <div className="flex justify-center mb-6 animate-fadeInUp">
               <Star className="h-12 w-12 text-sky-700" />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeInUp delay-100">
-              <span className="bg-gradient-to-r from-[#1e3a8a] to-[#2563eb] bg-clip-text text-transparent">{data.title.split(' ')[0]}</span>
-              <span className="text-[#111]"> {data.title.split(' ').slice(1).join(' ')} </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fadeInUp delay-100 hover:scale-110 transition-all duration-500 cursor-pointer">
+              <span className="bg-gradient-to-r from-[#1e3a8a] to-[#2563eb] bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-600 transition-all duration-500">{data.title.split(' ')[0]}</span>
+              <span className="text-[#111] hover:text-sky-600 hover:scale-105 transition-all duration-300"> {data.title.split(' ').slice(1).join(' ')} </span>
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full animate-slideInLeft delay-200"></div>
           </AnimateOnScroll>
@@ -84,7 +96,7 @@ const About = () => {
         <div className="container-custom relative z-10">
           <AnimateOnScroll>
             <div className="text-center mb-16">
-              <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-6 gradient-text">
+              <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-6 gradient-text hover:scale-110 hover:text-purple-600 transition-all duration-500 cursor-pointer">
                 הערכים שלנו
               </h2>
               <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto rounded-full"></div>
@@ -100,7 +112,7 @@ const About = () => {
                       {getIcon(value.icon)}
                     </div>
                   </div>
-                  <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4 text-white group-hover:text-sky-300 transition-colors">
+                  <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4 text-white group-hover:text-sky-300 group-hover:scale-110 group-hover:font-extrabold transition-all duration-300 cursor-pointer">
                     {value.title}
                   </h3>
                   <p className="text-blue-100 leading-relaxed text-xs sm:text-base">{value.description}</p>
