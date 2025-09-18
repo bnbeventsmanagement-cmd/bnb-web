@@ -1,11 +1,10 @@
 {
-  "builds": [{ "src": "package.json", "use": "@vercel/static-build" }],
-  "routes": [
-    { "src": "/(manifest\\.json|favicon\\.svg|favicon\\.ico|robots\\.txt|sitemap\\.xml|logo-bb\\.svg|icon\\.png|apple-touch-icon\\.png)", "dest": "/$1" },
-    { "src": "/legal/(.*)", "dest": "/index.html" },
-    { "src": "/images/(.*)", "dest": "/images/$1" },
-    { "src": "/assets/(.*)", "dest": "/assets/$1" },
-    { "src": "/.*", "dest": "/index.html" }
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/legal/(.*)", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "redirects": [
     {
@@ -34,7 +33,7 @@
         },
         {
           "key": "X-Frame-Options",
-          "value": "DENY"
+          "value": "SAMEORIGIN"
         },
         {
           "key": "X-XSS-Protection",
@@ -64,6 +63,5 @@
         }
       ]
     }
-  ],
-  "outputDirectory": "dist"
+  ]
 }

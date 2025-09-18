@@ -1,0 +1,112 @@
+# TODO: Manual Tasks for B&B RSVP Deployment
+
+## 🚨 CRITICAL - Must be done manually:
+
+### 1. Environment Variables in Vercel
+**Status**: REQUIRED
+**Action**: Set the following environment variables in Vercel Dashboard:
+```
+VITE_CONTACT_EMAIL=bnbeventsmanagement@gmail.com
+VITE_CONTACT_PHONE=+972-50-488-4840
+VITE_SITE_URL=https://www.bnb-rsvp.com
+VITE_WEB3FORMS_ACCESS_KEY=7d7dcc9e-3c6a-4768-b0fa-1bb4da118da6
+VITE_INSTAGRAM_URL=https://instagram.com/bnb_rsvp
+VITE_WHATSAPP_URL=https://wa.me/972504884840
+VITE_FACEBOOK_URL=https://facebook.com/bnb.rsvp
+VITE_LOGIN_URL=https://eventsmanagment.com/login
+VITE_FORMSPREE_FORM_ID=xpwgqkzw
+```
+
+### 2. Vercel Project Configuration
+**Status**: REQUIRED
+**Action**: Verify in Vercel Dashboard:
+- Production Branch: `main`
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Root Directory: `.` (root)
+- Node.js Version: 18.x or higher
+
+### 3. Domain Configuration
+**Status**: REQUIRED
+**Action**: If migrating from GoDaddy or other hosting:
+- Update DNS A record: `@` → `76.76.19.19`
+- Update DNS CNAME record: `www` → `cname.vercel-dns.com`
+- Wait 24-48 hours for DNS propagation
+
+### 4. GitHub Secrets (for CI/CD)
+**Status**: OPTIONAL
+**Action**: Set in GitHub Repository Settings → Secrets:
+```
+VERCEL_TOKEN=your_vercel_token
+VERCEL_ORG_ID=your_org_id
+VERCEL_PROJECT_ID=your_project_id
+VITE_CONTACT_EMAIL=bnbeventsmanagement@gmail.com
+VITE_CONTACT_PHONE=+972-50-488-4840
+VITE_SITE_URL=https://www.bnb-rsvp.com
+VITE_WEB3FORMS_ACCESS_KEY=7d7dcc9e-3c6a-4768-b0fa-1bb4da118da6
+```
+
+## ⚠️ IMPORTANT - Should be done:
+
+### 5. SSL Certificate Verification
+**Status**: CHECK
+**Action**: Verify SSL certificate is properly configured for custom domain
+
+### 6. Analytics Setup
+**Status**: OPTIONAL
+**Action**: Enable Vercel Analytics in project settings for performance monitoring
+
+### 7. Error Monitoring
+**Status**: RECOMMENDED
+**Action**: Consider adding error monitoring service (Sentry, LogRocket, etc.)
+
+## ✅ COMPLETED - Already done:
+
+### 8. vercel.json Configuration
+**Status**: COMPLETED
+**Action**: Fixed routes configuration, converted to rewrites/redirects
+
+### 9. Package.json Updates
+**Status**: COMPLETED
+**Action**: Added Node.js version requirement, updated build scripts
+
+### 10. Environment Variables Template
+**Status**: COMPLETED
+**Action**: Created env.example with all required variables
+
+### 11. Build Verification Script
+**Status**: COMPLETED
+**Action**: Created scripts/verify-env.mjs for environment validation
+
+### 12. CI/CD Pipeline
+**Status**: COMPLETED
+**Action**: Created GitHub Actions workflow for automated testing
+
+### 13. Deployment Documentation
+**Status**: COMPLETED
+**Action**: Created comprehensive README-DEPLOY.md guide
+
+## 🔍 VERIFICATION CHECKLIST:
+
+After deployment, verify:
+- [ ] Site loads at https://www.bnb-rsvp.com
+- [ ] All pages work correctly (no 404s)
+- [ ] Contact form submits successfully
+- [ ] Images load properly
+- [ ] Mobile responsiveness works
+- [ ] SEO meta tags are present
+- [ ] SSL certificate is valid
+- [ ] Performance scores are good (Lighthouse)
+
+## 📞 SUPPORT:
+
+If issues arise:
+1. Check Vercel deployment logs
+2. Verify environment variables are set
+3. Check DNS configuration
+4. Review README-DEPLOY.md for troubleshooting
+
+---
+Generated: December 19, 2024
+Project: B&B אישורי הגעה והושבה
+Status: Ready for deployment after manual configuration

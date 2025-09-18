@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "node scripts/verify-env.mjs && tsc -b && vite build",
     "preview": "vite preview --strictPort --port 4173",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:a11y": "eslint --ext .ts,.tsx src",
-    "check:a11y": "npm run lint:a11y"
+    "check:a11y": "npm run lint:a11y",
+    "verify-env": "node scripts/verify-env.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
