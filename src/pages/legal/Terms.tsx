@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { scrollToTop } from '../../utils/scrollToTop';
 import { FileText, Shield, AlertTriangle, Mail, Scale } from 'lucide-react';
-import Seo from '../../components/Seo.tsx';
+import Seo from '../../components/Seo';
 
 const Terms = () => {
   useEffect(() => {

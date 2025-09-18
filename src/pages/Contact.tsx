@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { PhoneIcon, MailIcon, MessageCircle, Send } from 'lucide-react';
-import Seo from '../components/Seo.tsx';
+import Seo from '../components/Seo';
 import ContactForm from '../components/ContactForm';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import contact data

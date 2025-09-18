@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { scrollToTop } from '../../utils/scrollToTop';
 import { Shield, Eye, Database, Lock, Users, Mail, Cookie } from 'lucide-react';
-import Seo from '../../components/Seo.tsx';
+import Seo from '../../components/Seo';
 
 const Privacy = () => {
   useEffect(() => {
