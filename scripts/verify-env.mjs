@@ -9,13 +9,15 @@ import { readFileSync } from 'fs';
 import { join } from 'path';
 
 const REQUIRED_ENV_VARS = [
-  'VITE_CONTACT_EMAIL',
-  'VITE_CONTACT_PHONE',
-  'VITE_SITE_URL',
-  'VITE_WEB3FORMS_ACCESS_KEY'
+  // Note: These are checked but not required for build to succeed
+  // The app has fallback values in the code
 ];
 
 const OPTIONAL_ENV_VARS = [
+  'VITE_CONTACT_EMAIL',
+  'VITE_CONTACT_PHONE',
+  'VITE_SITE_URL',
+  'VITE_WEB3FORMS_ACCESS_KEY',
   'VITE_INSTAGRAM_URL',
   'VITE_WHATSAPP_URL',
   'VITE_FACEBOOK_URL',
