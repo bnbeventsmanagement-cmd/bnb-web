@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO_CONSTANTS } from '../lib/seo/constants';
+import { SEO_CONSTANTS } from '../utils/seo';
 
 interface StructuredDataProps {
   type: 'organization' | 'website' | 'localBusiness' | 'breadcrumb' | 'article' | 'faq';

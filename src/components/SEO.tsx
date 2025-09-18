@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO_CONSTANTS, PAGE_SEO } from '../lib/seo/constants';
+import { SEO_CONSTANTS, PAGE_SEO } from '../utils/seo.ts';
 import StructuredData from './StructuredData';
 
 interface SeoProps {

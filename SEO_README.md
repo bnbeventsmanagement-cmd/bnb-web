@@ -7,7 +7,7 @@ This document outlines the comprehensive SEO implementation for the B&B RSVP web
 
 ### 1. Metadata & Head Tags
 - **Global SEO Component**: `src/components/Seo.tsx`
-- **Constants**: `src/lib/seo/constants.ts`
+- **Constants**: `src/utils/seo.ts`
 - **Page-specific metadata** for all pages
 - **Canonical URLs** for all pages
 - **Open Graph** and **Twitter Card** meta tags
@@ -82,7 +82,7 @@ import Seo from '../components/Seo';
 ```
 
 ### Updating Page SEO Data
-Edit `src/lib/seo/constants.ts` to update page-specific SEO information:
+Edit `src/utils/seo.ts` to update page-specific SEO information:
 
 ```typescript
 export const PAGE_SEO = {
