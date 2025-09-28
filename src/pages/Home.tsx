@@ -92,7 +92,7 @@ const Home = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-white">
+      <section className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-white">
         {/* Animated White Sparkly Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50 to-indigo-50">
           {/* Floating geometric shapes - colorful but subtle */}
@@ -127,68 +127,267 @@ const Home = () => {
         </div>
         
         <div className="container-custom relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="order-2 md:order-1 animate-fadeInUp text-gray-800 text-center md:text-right">
-              <div className="flex items-center justify-center md:justify-start gap-2 mb-4 animate-slideInRight group">
-                <Sparkles className="h-6 w-6 text-sky-600 animate-pulse group-hover:animate-spin group-hover:text-purple-500 transition-all duration-500" aria-hidden="true" />
-                <span className="text-sky-700 font-medium hover:text-purple-600 hover:scale-110 hover:font-bold transition-all duration-300 cursor-pointer">שירותי אירועים מקצועיים</span>
+          {/* Mobile Layout - Keep as is */}
+          <div className="lg:hidden grid grid-cols-1 gap-12 items-center min-h-[600px]">
+            
+            {/* Main Content */}
+            <div className="text-center space-y-8">
+              {/* Header with Icon */}
+              <div className="flex items-center justify-center gap-3">
+                <Sparkles className="h-6 w-6 text-sky-600 animate-pulse" />
+                <span className="text-sky-700 font-medium text-lg">שירותי אירועים מקצועיים</span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fadeInUp delay-100 group">
-                <span className="bg-gradient-to-r from-sky-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent animate-gradient-x hover:scale-110 hover:text-purple-600 transition-all duration-500 cursor-pointer inline-block">אישורי</span>
-                <span className="text-gray-800 hover:text-sky-600 hover:scale-105 transition-all duration-300 cursor-pointer inline-block mx-2">הגעה והושבה</span>
-                <span className="bg-gradient-to-r from-cyan-600 via-blue-600 to-sky-600 bg-clip-text text-transparent animate-gradient-x hover:scale-110 hover:text-pink-600 transition-all duration-500 cursor-pointer inline-block">לאירועים</span>
+              
+              {/* Main Title */}
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                <div className="space-y-2">
+                  <div className="flex flex-wrap justify-center gap-2">
+                    <span className="bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent">אישורי</span>
+                    <span className="text-gray-800">הגעה</span>
+                    <span className="text-gray-800">לאירועים</span>
+                  </div>
+                  <div className="flex justify-center">
+                    <span className="bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">ושירותי הושבה</span>
+                  </div>
+                </div>
               </h1>
-              <p className="text-lg sm:text-xl mb-8 opacity-90 text-gray-700 leading-relaxed animate-fadeInUp delay-200 hover:text-sky-600 hover:scale-105 hover:font-semibold transition-all duration-500 cursor-pointer">שירות מקצועי לניהול הזמנות, אישורי הגעה וסידור הושבה לאירועים</p>
-              <div className="flex justify-center md:justify-start">
-              <Link 
-                to="/contact" 
-                onClick={scrollToTop}
-                  className="btn btn-primary inline-flex items-center gap-3 animate-bounceIn glow hover:animate-glow animate-slideInLeft delay-300 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                {data.ctaButton}
-                <ArrowLeft className="h-5 w-5" />
-              </Link>
+              
+              {/* Description */}
+              <p className="text-lg text-gray-600 leading-relaxed max-w-md mx-auto">
+                שירות מקצועי לאישורי הגעה לחתונה, דיילות להושבה וניהול אורחים מקצועי
+              </p>
+              
+              {/* CTA Button */}
+              <div className="flex justify-center pt-4">
+                <Link 
+                  to="/contact" 
+                  onClick={scrollToTop}
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  {data.ctaButton}
+                  <ArrowLeft className="h-5 w-5" />
+                </Link>
+              </div>
             </div>
-            </div>
-            <div className="order-1 md:order-2 animate-scaleIn delay-200 flex justify-center">
-              <div className="relative animate-fadeInUp delay-300 max-w-md md:max-w-lg lg:max-w-xl">
+
+            {/* Awards */}
+            <div className="text-center space-y-8">
+              {/* Awards Title */}
+              <div className="space-y-3">
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    בחירת הזוגות לשירות הטוב ביותר
+                  </span>
+                </h2>
+                <p className="text-lg text-gray-600 italic">
+                  זה לא אנחנו אומרים...
+                </p>
                 
-                {/* Main logo with effects */}
-                <div className="relative animate-fadeInUp delay-400 group">
-                  {/* Glowing background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 group-hover:scale-110"></div>
+                {/* Reviews Button */}
+                <div className="pt-4">
+                  <Link 
+                    to="/testimonials" 
+                    onClick={scrollToTop}
+                    className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    <span>הביקורות עלינו</span>
+                    <ArrowLeft className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Awards Images */}
+              <div className="flex justify-center items-center gap-8">
+                <div className="relative group">
+                  <img 
+                    src="./images/2023 שקוף.svg" 
+                    alt="פרס זוגות השנה 2023" 
+                    className="w-32 h-32 md:w-40 md:h-40 opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-110 hover:rotate-12 drop-shadow-2xl" 
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                
+                <div className="relative group">
+                  <img 
+                    src="./images/2024 שקוף.svg" 
+                    alt="פרס זוגות השנה 2024" 
+                    className="w-32 h-32 md:w-40 md:h-40 opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-110 hover:-rotate-12 drop-shadow-2xl" 
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Logo */}
+            <div className="flex justify-center">
+              <div className="relative max-w-sm">
+                <div className="relative group">
+                  {/* Glowing background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
                   
                   {/* Rotating ring around logo */}
                   <div className="absolute inset-0 border-2 border-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full animate-spin-slow group-hover:animate-spin"></div>
                   
-                  {/* Logo with hover effects */}
+                  {/* Logo */}
                   <img 
                     src="./images/logo-bnb.svg" 
                     alt="B&B אישורי הגעה לאירועים - לוגו החברה" 
-                    className="relative w-full h-auto animate-spin-slow group-hover:scale-110 group-hover:animate-spin transition-all duration-500 ease-out filter group-hover:brightness-110 group-hover:contrast-110 group-hover:drop-shadow-2xl" 
+                    className="relative w-full h-auto animate-spin-slow group-hover:scale-110 group-hover:animate-spin transition-all duration-500 drop-shadow-2xl" 
                     loading="eager"
-                    decoding="async"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = './logo-bb.svg';
                     }}
                   />
-                  
-                  {/* Floating particles around logo */}
-                  <div className="absolute -top-4 -left-4 w-2 h-2 bg-blue-400/60 rounded-full animate-bounce delay-500 group-hover:animate-ping"></div>
-                  <div className="absolute -top-2 -right-6 w-1.5 h-1.5 bg-purple-400/60 rounded-full animate-bounce delay-1000 group-hover:animate-ping"></div>
-                  <div className="absolute -bottom-4 -left-2 w-2 h-2 bg-pink-400/60 rounded-full animate-bounce delay-1500 group-hover:animate-ping"></div>
-                  <div className="absolute -bottom-2 -right-4 w-1.5 h-1.5 bg-cyan-400/60 rounded-full animate-bounce delay-2000 group-hover:animate-ping"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout - New Design */}
+          <div className="hidden lg:block space-y-16">
+            
+            {/* Top Section - Main Title with B&B Logos */}
+            <div className="text-center space-y-8">
+              {/* Header with Icon */}
+              <div className="flex items-center justify-center gap-3">
+                <Sparkles className="h-6 w-6 text-sky-600 animate-pulse" />
+                <span className="text-sky-700 font-medium text-lg">שירותי אירועים מקצועיים</span>
+              </div>
+              
+              {/* Main Title with B&B Logos on sides */}
+              <div className="flex items-center justify-between gap-8">
+                {/* Left B&B Logo */}
+                <div className="flex-shrink-0">
+                  <div className="relative max-w-40">
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="absolute inset-0 border-2 border-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full animate-spin-slow group-hover:animate-spin"></div>
+                      <img 
+                        src="./images/logo-bnb.svg" 
+                        alt="B&B אישורי הגעה לאירועים - לוגו החברה" 
+                        className="relative w-full h-auto animate-spin-slow group-hover:scale-110 group-hover:animate-spin transition-all duration-500 drop-shadow-2xl" 
+                        loading="eager"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = './logo-bb.svg';
+                        }}
+                      />
+                    </div>
+                  </div>
                 </div>
                 
+                {/* Main Title - All in one line */}
+                <div className="flex-1">
+                  <h1 className="text-6xl font-bold leading-tight">
+                    <div className="flex flex-wrap justify-center gap-3">
+                      <span className="bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent">אישורי</span>
+                      <span className="text-gray-800">הגעה</span>
+                      <span className="text-gray-800">לאירועים</span>
+                      <span className="bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">ושירותי הושבה</span>
+                    </div>
+                  </h1>
+                </div>
+                
+                {/* Right B&B Logo */}
+                <div className="flex-shrink-0">
+                  <div className="relative max-w-40">
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="absolute inset-0 border-2 border-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full animate-spin-slow group-hover:animate-spin"></div>
+                      <img 
+                        src="./images/logo-bnb.svg" 
+                        alt="B&B אישורי הגעה לאירועים - לוגו החברה" 
+                        className="relative w-full h-auto animate-spin-slow group-hover:scale-110 group-hover:animate-spin transition-all duration-500 drop-shadow-2xl" 
+                        loading="eager"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = './logo-bb.svg';
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Description */}
+              <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                שירות מקצועי לאישורי הגעה לחתונה, דיילות להושבה וניהול אורחים מקצועי
+              </p>
+              
+              {/* CTA Button */}
+              <div className="flex justify-center pt-4">
+                <Link 
+                  to="/contact" 
+                  onClick={scrollToTop}
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  {data.ctaButton}
+                  <ArrowLeft className="h-5 w-5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Bottom Section - Awards in Center */}
+            <div className="flex justify-center">
+              <div className="text-center space-y-8">
+                {/* Awards Title */}
+                <div className="space-y-3">
+                  <h2 className="text-3xl font-bold">
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      בחירת הזוגות לשירות הטוב ביותר
+                    </span>
+                  </h2>
+                  <p className="text-lg text-gray-600 italic">
+                    זה לא אנחנו אומרים...
+                  </p>
+                  
+                  {/* Reviews Button */}
+                  <div className="pt-4">
+                    <Link 
+                      to="/testimonials" 
+                      onClick={scrollToTop}
+                      className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white px-6 py-3 rounded-lg font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                      <span>הביקורות עלינו</span>
+                      <ArrowLeft className="h-4 w-4" />
+                    </Link>
+                  </div>
+                </div>
+                
+                {/* Awards Images */}
+                <div className="flex justify-center items-center gap-8">
+                  <div className="relative group">
+                    <img 
+                      src="./images/2023 שקוף.svg" 
+                      alt="פרס זוגות השנה 2023" 
+                      className="w-40 h-40 opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-110 hover:rotate-12 drop-shadow-2xl" 
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  
+                  <div className="relative group">
+                    <img 
+                      src="./images/2024 שקוף.svg" 
+                      alt="פרס זוגות השנה 2024" 
+                      className="w-40 h-40 opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-110 hover:-rotate-12 drop-shadow-2xl" 
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+
       {/* Counter Section */}
-      <section className="py-16 bg-gradient-to-r from-sky-600 via-blue-700 to-indigo-800 relative overflow-hidden">
+      <section className="py-8 bg-gradient-to-r from-sky-600 via-blue-700 to-indigo-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-500/20 via-blue-600/20 to-indigo-700/20"></div>
         <div className="container-custom relative z-10">
           <AnimateOnScroll>
@@ -402,79 +601,73 @@ const Home = () => {
                 title: "אירועים עסקיים", 
                 description: "מערכת מתקדמת ודינמית לניהול אירוע עסקי מקטן ועד גדול", 
                 icon: Briefcase, 
-                color: "from-blue-500 to-cyan-500",
+                color: "from-blue-600 to-cyan-500",
                 buttonText: "להרשמה בחינם",
-                image: "./images/logo-bnb.svg"
+                image: "./images/event-photography.svg"
               },
               { 
                 title: "בריתות", 
                 description: "הבייבי שלכם נולד? גלו כמה פשוט לארגן אירוע אפילו בטווח קצר מאוד", 
                 icon: Baby, 
-                color: "from-pink-500 to-rose-500",
+                color: "from-emerald-500 to-teal-500",
                 buttonText: "למידע נוסף",
-                image: "./images/logo-bnb.svg"
+                image: "./images/brit.svg"
               },
               { 
                 title: "בר/ת מצווה", 
                 description: "גיל המצוות הגיע וזה הזמן לתכנן נכון ביחד עם ההורים את האירוע בקלות", 
                 icon: StarIcon2, 
-                color: "from-purple-500 to-indigo-500",
+                color: "from-purple-600 to-violet-500",
                 buttonText: "למידע נוסף",
-                image: "./images/logo-bnb.svg"
+                image: "./images/bar-mitzvah.svg"
               },
               { 
                 title: "חתונות", 
                 description: "התארסתם? מזל טוב! אנחנו כאן כדי לעזור לכם לנהל את החתונה בקלות", 
                 icon: Heart, 
-                color: "from-red-500 to-pink-500",
+                color: "from-rose-500 to-pink-500",
                 buttonText: "למידע נוסף",
-                image: "./images/logo-bnb.svg"
+                image: "./images/wedding.svg"
               }
             ].map((event, index) => (
               <AnimateOnScroll key={index}>
-                <div className="relative bg-gradient-to-br from-gray-800/90 via-gray-900/95 to-black/90 backdrop-blur-xl rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-5 lg:p-6 hover:animate-float group border border-gray-600/30 hover:border-gray-500/50 transition-all duration-500 shadow-lg sm:shadow-xl md:shadow-2xl hover:shadow-3xl overflow-hidden w-full h-[200px] sm:h-[220px] md:h-[280px] lg:h-[320px] flex flex-col">
+                <div className="relative bg-gradient-to-br from-gray-800/90 via-gray-900/95 to-black/90 backdrop-blur-xl rounded-xl sm:rounded-2xl md:rounded-3xl p-2 sm:p-4 md:p-5 lg:p-6 hover:animate-float group border border-gray-600/30 hover:border-gray-500/50 transition-all duration-500 shadow-lg sm:shadow-xl md:shadow-2xl hover:shadow-3xl overflow-hidden w-full h-[180px] sm:h-[220px] md:h-[280px] lg:h-[320px] flex flex-col">
                   {/* Animated background gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-700/20 via-transparent to-gray-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Glowing border effect */}
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
-                  {/* Image - Optimized for 2 columns on mobile */}
-                  <div className="relative mb-2 sm:mb-2 md:mb-3 rounded-lg sm:rounded-xl overflow-hidden flex-shrink-0">
-                    <img 
-                      src={event.image} 
-                      alt={`${event.title} - דוגמת אירוע של B&B אישורי הגעה`}
-                      className="w-full h-14 sm:h-16 md:h-24 lg:h-28 object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  </div>
                   
                   {/* Content */}
-                  <div className="relative z-10 text-center flex-1 flex flex-col justify-between">
-                    <div className="space-y-1 sm:space-y-1 md:space-y-2 px-1 sm:px-0">
-                      {/* Title */}
-                      <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 leading-tight">
+                  <div className="relative z-10 text-center flex-1 flex flex-col justify-between p-2 sm:p-4">
+                    <div className="space-y-2 sm:space-y-4 md:space-y-5 flex-1">
+                      {/* Title - Responsive sizing */}
+                      <h3 className={`text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r ${event.color} bg-clip-text text-transparent group-hover:scale-105 transition-all duration-300 leading-tight drop-shadow-lg group-hover:drop-shadow-2xl`}>
                         {event.title}
                       </h3>
                       
-                      {/* Description - visible on all screens */}
-                      <p className="text-xs sm:text-xs md:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed">
-                        {event.description}
+                      {/* Description - Responsive sizing */}
+                      <p className="text-xs sm:text-base md:text-lg text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed overflow-hidden sm:overflow-visible" style={{
+                        display: '-webkit-box',
+                        WebkitLineClamp: 3,
+                        WebkitBoxOrient: 'vertical'
+                      }}>
+                        <span className="sm:hidden">{event.description}</span>
+                        <span className="hidden sm:inline">{event.description}</span>
                       </p>
                     </div>
                     
                     {/* Button */}
-                    <div className="mt-1 sm:mt-2 md:mt-3 px-1 sm:px-0">
+                    <div className="mt-2 sm:mt-5 md:mt-6 flex-shrink-0">
                       <Link 
                         to="/process" 
                         onClick={scrollToTop}
-                        className={`inline-flex items-center gap-1 sm:gap-1 md:gap-2 px-2 py-1 sm:px-2 sm:py-1 md:px-3 md:py-1.5 lg:px-4 lg:py-2 bg-gradient-to-r ${event.color} text-white font-semibold rounded-lg sm:rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-300 group-hover:animate-glow text-xs sm:text-xs md:text-sm lg:text-base w-full sm:w-auto justify-center`}
+                        className={`inline-flex items-center gap-1 sm:gap-2 md:gap-3 px-2 py-1.5 sm:px-5 sm:py-2.5 md:px-6 md:py-3 lg:px-8 lg:py-4 bg-gradient-to-r ${event.color} text-white font-bold rounded-lg sm:rounded-2xl hover:shadow-lg hover:scale-105 transition-all duration-300 group-hover:animate-glow text-xs sm:text-base md:text-lg w-full justify-center`}
                         aria-label={`לפרטים על ${event.title}`}
                       >
                         <span>לפרטים</span>
-                        <ArrowRight className="h-2 w-2 sm:h-2 sm:w-2 md:h-3 md:w-3 lg:h-4 lg:w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight className="h-3 w-3 sm:h-5 sm:w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform duration-300" />
                       </Link>
                     </div>
                   </div>
@@ -554,7 +747,7 @@ const Home = () => {
               },
               { 
                 title: "העברת הכספים", 
-                description: "העברת כספי המתנות תתבצע עד 5 ימי עסקים החל מיומיים לאחר מועד האירוע", 
+                description: "העברת כספי המתנות תתבצע עד 5 ימי עסקים החל מיומיים לאחר האירוע", 
                 icon: FileText, 
                 color: "from-indigo-400 to-blue-500" 
               },
@@ -782,21 +975,34 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 blue-gradient-bg text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-600/20 via-blue-600/20 to-indigo-600/20 animate-pulse"></div>
+      <section className="py-20 bg-white relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23334155' fill-opacity='0.4'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+        </div>
+        
         <div className="container-custom text-center relative z-10">
           <AnimateOnScroll>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 hover:scale-110 hover:text-sky-300 transition-all duration-500 cursor-pointer">מוכנים להתחיל?</h2>
-            <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90 text-blue-100 leading-relaxed">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-900 hover:scale-105 transition-all duration-500 cursor-pointer">
+              <span className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 bg-clip-text text-transparent">
+                מוכנים להתחיל?
+              </span>
+            </h2>
+            <p className="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-gray-700 leading-relaxed font-medium">
               צרו איתנו קשר עוד היום כדי לקבל הצעת מחיר מותאמת אישית לאירוע שלכם.
             </p>
-            <Link 
-              to="/contact" 
-              onClick={scrollToTop}
-              className="btn btn-primary text-lg px-8 py-4 animate-bounceIn glow hover:animate-glow"
-            >
-              צרו קשר עכשיו
-            </Link>
+            <div className="flex justify-center">
+              <Link 
+                to="/contact" 
+                onClick={scrollToTop}
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-600 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                צרו קשר עכשיו
+                <ArrowLeft className="h-5 w-5" />
+              </Link>
+            </div>
           </AnimateOnScroll>
         </div>
       </section>

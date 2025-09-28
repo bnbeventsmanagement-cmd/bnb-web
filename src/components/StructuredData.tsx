@@ -87,10 +87,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data, breadcrumbs
             "name": "Israel"
           },
           "serviceType": [
-            "אישורי הגעה לאירועים",
-            "ניהול אורחים",
+            "אישורי הגעה לחתונה",
+            "אישורים לחתונה", 
+            "דיילות להושבה",
             "סידור הושבה",
+            "ניהול אורחים",
             "צוות קבלת פנים",
+            "RSVP לחתונה",
+            "שירותי חתונה",
             "עיצוב הזמנות דיגיטליות"
           ],
           "openingHours": "Mo-Su 09:00-18:00"
