@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AwardIcon, ShieldIcon, HeartIcon, TargetIcon, Star } from 'lucide-react';
-import Seo from '../components/Seo';
+import Seo from '../components/SEO';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import about data
 import aboutData from '../cms/data/about.json';

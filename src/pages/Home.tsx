@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UsersIcon, LayoutGridIcon, ArrowLeft, Sparkles, CheckCircle, Mail, Gift, MapPin, MessageSquare, Bell, Users, Star as StarIcon, CreditCard, FileText, Download, Smartphone, DollarSign, Briefcase, Baby, Star as StarIcon2, Heart, ArrowRight } from 'lucide-react';
-import Seo from '../components/Seo';
+import Seo from '../components/SEO';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 import { scrollToTop } from '../utils/scrollToTop';
 // Import home data
@@ -144,17 +144,17 @@ const Home = () => {
                   <div className="flex flex-wrap justify-center gap-2">
                     <span className="bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent">אישורי</span>
                     <span className="text-gray-800">הגעה</span>
-                    <span className="text-gray-800">לאירועים</span>
+                    <span className="text-gray-800">והושבה</span>
                   </div>
                   <div className="flex justify-center">
-                    <span className="bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">ושירותי הושבה</span>
+                    <span className="bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">לאירועים</span>
                   </div>
                 </div>
               </h1>
               
               {/* Description */}
               <p className="text-lg text-gray-600 leading-relaxed max-w-md mx-auto">
-                שירות מקצועי לאישורי הגעה לחתונה, דיילות להושבה וניהול אורחים מקצועי
+                שירות מקצועי לניהול הזמנות, אישורי הגעה וסידור הושבה לאירועים
               </p>
               
               {/* CTA Button */}
@@ -285,8 +285,8 @@ const Home = () => {
                     <div className="flex flex-wrap justify-center gap-3">
                       <span className="bg-gradient-to-r from-sky-600 to-cyan-600 bg-clip-text text-transparent">אישורי</span>
                       <span className="text-gray-800">הגעה</span>
-                      <span className="text-gray-800">לאירועים</span>
-                      <span className="bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">ושירותי הושבה</span>
+                      <span className="text-gray-800">והושבה</span>
+                      <span className="bg-gradient-to-r from-cyan-600 to-sky-600 bg-clip-text text-transparent">לאירועים</span>
                     </div>
                   </h1>
                 </div>
@@ -314,7 +314,7 @@ const Home = () => {
               
               {/* Description */}
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                שירות מקצועי לאישורי הגעה לחתונה, דיילות להושבה וניהול אורחים מקצועי
+                שירות מקצועי לניהול הזמנות, אישורי הגעה וסידור הושבה לאירועים
               </p>
               
               {/* CTA Button */}

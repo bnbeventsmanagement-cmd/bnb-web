@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { HelpCircle, ChevronDownIcon, ChevronUpIcon, MessageCircle } from 'lucide-react';
-import Seo from '../components/Seo';
+import Seo from '../components/SEO';
 import AnimateOnScroll from '../components/AnimateOnScroll';
 // Import FAQ data
 import faqData from '../cms/data/faq.json';
